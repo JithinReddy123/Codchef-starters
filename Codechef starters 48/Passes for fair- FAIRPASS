@@ -1,0 +1,44 @@
+Passes for Fair
+There is a fair going on in Chefland. Chef wants to visit the fair along with his 
+N
+N friends. Chef manages to collect 
+K
+K passes for the fair. Will Chef be able to enter the fair with all his 
+N
+N friends?
+A person can enter the fair using one pass, and each pass can be used by only one person.
+
+Input Format
+The first line of input will contain a single integer 
+T
+T, denoting the number of test cases.
+Each test case consists of a single line containing two space-separated integers 
+N,
+K
+
+Constraints
+1≤T≤100
+1≤T≤100
+1≤N,K≤100
+1≤N,K≤100
+--------------------------------------
+CODE 
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int k;
+	cin>>k;
+	while(k--)
+	{
+	    int a,b;
+	    cin>>a>>b;
+	    if(a>b){
+	        cout<<a-b<<"\n";
+	    }
+	    else
+	    cout<<0<<"\n";
+	}
+	return 0;
+}
