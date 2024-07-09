@@ -1,0 +1,45 @@
+Is it hot or cold
+Chef considers the climate HOT if the temperature is above 
+20
+20, otherwise he considers it COLD. You are given the temperature 
+𝐶
+C, find whether the climate is HOT or COLD.
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+The first and only line of each test case contains a single integer, the temperature 
+𝐶
+C.
+Output Format
+For each test case, print on a new line whether the climate is HOT or COLD.
+
+You may print each character of the string in either uppercase or lowercase (for example, the strings hOt, hot, Hot, and HOT will all be treated as identical).
+
+Constraints
+1≤𝑇≤50
+1≤T≤50
+0≤𝐶≤40
+
+-----------------------------------------------------------------------
+CODE
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int k;
+	cin>>k;
+	while(k--)
+	{
+	    int a,b;
+	    cin>>a>>b;
+	    if(a>b){
+	        cout<<a-b<<"\n";
+	    }
+	    else
+	    cout<<0<<"\n";
+	}
+	return 0;
+}  
