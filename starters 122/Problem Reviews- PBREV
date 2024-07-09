@@ -1,0 +1,65 @@
+Problem Reviews
+Om Khangat has come up with a problem that he thinks can be used in a CodeChef contest, and has submitted his proposal for review.
+
+CodeChef's review panel has 𝑁judges, each of whom will give Om's problem a point value between 1 and10
+10, denoting how good they think it is (1 being the lowest, and 10 the highest).
+A problem is considered good if and only if every judge gives it a score that's strictly greater than 4.
+You know the point values given by each judge to Om's problem. Can you tell whether his problem is good?
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains one integer 
+𝑁
+N — the number of judges.
+The next line contains 
+N space-separated integers 
+1,𝑆2,𝑆3,…,𝑆𝑁S 1,S2,S3,…,S 
+  — where 
+𝑆𝑖 denotes the score given to Om's problem by the 
+i-th judge.
+Output Format
+For each test case, print the answer on a new line: YES if Om's problem is good, and NO otherwise.
+Each character of the output may be printed in either uppercase or lowercase, i.e, the strings YES, yes, YeS, and yES will all be treated as equivalent.
+Constraints
+1≤𝑇≤1000
+1≤𝑁≤1000
+1≤𝑆𝑖≤10
+The sum of 𝑁 across all tests won't exceed 2000.
+----------------------------------------------------------------
+CODE
+#include <stdio.h>
+#include <stdbool.h>
+int main(void) {
+    int k;
+    scanf("%d",&k); // Number of test cases
+    
+    while (k--) {
+        int w;
+        scanf("%d",&w); // Number of judges
+        
+        bool solution = true; // Assume problem is good initially
+        
+        for (int i = 0; i < w; ++i) {
+            int score;
+            scanf("%d",&score); // Score given by judge i
+            
+            if (score <= 4) { // If any score is not greater than 4
+                solution = false; // Problem is not good
+            }
+        }
+        
+        // Output result for current test case
+        if (solution) {
+            printf("YES\n");
+        } else {
+            printf("NO\n");
+        }
+    }
+    
+    return 0;
+
+
+}
+
