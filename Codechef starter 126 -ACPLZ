@@ -19,15 +19,9 @@ int main() {
 	// your code goes here
 	int k;
 	cin>>k;
-	while(k--)
-	{
-	    int a,b;
-	    cin>>a>>b;
-	    if(a>b){
-	        cout<<a-b<<"\n";
-	    }
+	    if(k>30)
+	    cout<<"YES"<<endl;
 	    else
-	    cout<<0<<"\n";
-	}
+	    cout<<"NO"<<endl;
 	return 0;
 }
